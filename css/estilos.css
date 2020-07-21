@@ -9,9 +9,12 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 0 0 0;
-    font-family: 'Fuente1', 'Fuente', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins','Fuente1', 'Fuente', Arial, Helvetica, sans-serif;
     color: #253137;
+    background-color: #f3eae6;
 }
+
+/* Fuentes */
 
 @font-face {
     font-family: 'Fuente';
@@ -28,31 +31,112 @@ body {
     src: url("../fonts/CabinCondensed-Bold.ttf");
 }
 
-#encabezado {
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Art';
+    src: url("../fonts/NEXT\ ART_SemiBold.otf");
+}
+
+/* #encabezado {
     width: 100%;
-    height: 10%;
-    background-image: url(../img/banner.jpg);
-    background-attachment: fixed;
+    height: 60%;
+    background-image: url(../img/woman-3377839_1920.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
+} */
+
+/* .slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
 }
 
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+} */
+
+#slider {
+    overflow: hidden;
+    
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    animation-direction: alternate;
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+	0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
 .logo {
     width: 30%;
     height: auto;
     float: none;
     margin-right: 10px;
     line-height: 150px;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-left: 15px;
+    margin-bottom: 60px;
 }
 
 header {
     width: 100%;
-    background: #253137;
+    background: #9D8189;
     position: fixed;
+    z-index: 100;
 }
 
 #btn-menu {
@@ -77,13 +161,12 @@ header label:hover {
     list-style: none;
     margin: 0px;
     display: flex;
-    font-family: 'Fuente', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins','Fuente', Arial, Helvetica, sans-serif;
 }
 
 .menu li {
     flex-grow: 1;
     text-align: center;
-
 }
 
 .menu li a {
@@ -96,7 +179,7 @@ header label:hover {
 }
 
 .menu li:hover {
-    background-color: #E68722;
+    background-color: #83C5BE;
 }
 
 .justificada {
@@ -108,8 +191,8 @@ header label:hover {
 }
 
 .titulo {
-    font-family: 'FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
-    color: #ff9a04;
+    font-family: 'Poppins','FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
+    color: #83C5BE;
     font-size: 45px;
     font-weight: bold;
     border: 2px solid black;
@@ -121,12 +204,13 @@ header label:hover {
 .titulo1 {
     font-size: 34px;
     font-family: 'FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
-    color: #ff9a04;
-    -webkit-text-stroke: 1px black;
+    color: #83C5BE;
+    -webkit-text-stroke: 1px #000000;
+    text-transform: uppercase;
 }
 
 .titulo3 {
-    font-family: 'FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins','FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
     color: #ff9a04;
     font-size: 45px;
     font-weight: bold;
@@ -137,12 +221,14 @@ header label:hover {
 }
 
 .titulo2 {
-    font-family: 'FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
-    color: #ff9a04;
+    font-family: 'Art','FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
+    color: #83C5BE;
     font-size: 45px;
     font-weight: bold;
-    border: 2px solid black;
-    -webkit-text-stroke: 2px black;
+    border: 3px solid #5C5C5C;
+    -webkit-text-stroke: 2px #5C5C5C;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .parrafo {
@@ -162,6 +248,7 @@ header label:hover {
 .parrafo1 {
     font-size: 24px;
     text-align: center;
+    font-family: 'Poppins';
 }
 
 .parrafo2 {
@@ -191,21 +278,12 @@ header label:hover {
     -webkit-text-stroke: 0.7px black;
 }
 
-.imagen {
-    width: 300px;
-    height: 400px;
-    float: left;
-    margin-right: 15px;
-    line-height: 150px;
-    margin-top: 21px;
-    margin-left: 15px;
-}
-
 #inicio {
     padding: 20px;
     height: auto;
 }
 
+/* Estilos de Formulario */
 
 form {
     width: 950px;
@@ -234,9 +312,10 @@ textarea {
 }
 
 #boton {
-    background: #E68722;
+    background: #006D77;
     color: white;
     padding: 20px;
+    border: 1px solid black;
 }
 
 #boton:hover {
@@ -247,7 +326,6 @@ textarea {
     height: auto;
     width: 96%;
     text-align: center;
-    background-color: #fff;
     padding: 2%;
 }
 
@@ -262,41 +340,127 @@ textarea {
     font-size: 24px;
 }
 
-#comunes {
-    width: 96%;
-    height: auto;
-    background-color: white;
-    padding: 2%;
+/* Estilos de la Seccion Vestidos de Verano */
+
+#vestidos .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#comunes h3 {
-    font-family: 'FuenteB', 'Fuente', Arial, Helvetica, sans-serif;
-    color: #ff9a04;
-    font-size: 34px;
+#vestidos article {
+    margin: 15px;
+}
+
+#vestidos img {
+    width: 100%;
+    max-width: 280px;
+}
+
+#vestidos p {
+    text-align: center;
+    font-size: 22px;
+    margin: 25px;
+}
+
+#vestidos h4 {
+    text-align: center;
     font-weight: bold;
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    -webkit-text-stroke: 2px black;
 }
 
+/* Estilos de la seccion trucos */
 
-
-#legalidad {
+#trucos {
     width: 96%;
     height: auto;
-    background-color: #0c3153;
     padding: 2%;
 }
 
-#legalidad img {
-    width: 40%;
-    display: block;
-    float: left;
-    padding-top: 0%;
-    padding-right: 1%;
+
+/*Estilos de la galeria*/
+
+.galeria {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    list-style: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+.galeria li {
+    margin: 5px;
+
+}
+
+.galeria img {
+    width: 315px;
+    height: auto;
+}
+
+/*Estilos del modal*/
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    background: #f3eae6d0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen a {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.imagen a:nth-child(2){
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.imagen img {
+    width: 500px;
+    height: 90%;
+    max-width: 100%;
+    border: 7px solid black;
+    box-sizing: border-box;
+    margin-top: 75px;
+}
+
+.cerrar {
+    display: block;
+    background: white;
+    width: 25px;
+    height: 25px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+}
 
 #contacto {
     width: 100%;
@@ -364,7 +528,7 @@ textarea {
     font-family: 'social', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 53px;
     text-decoration: none;
-    color: #E68722;
+    color: #83C5BE;
 }
 
 .banner1 {
@@ -384,20 +548,18 @@ textarea {
 }
 
 .publicarta {
-    width: 120px;
-    height: 240px;
-    padding: 2%;
+    width: 250px;
+    height: auto;
     margin-left: 1%;
     float: right;
     border: 1px solid black;
-    cursor: pointer;
 }
 
 
 #pie {
     width: 100%;
     height: 80px;
-    background-color: #253137;
+    background-color: #9D8189;
     text-align: center;
     padding-top: 8px;
     color: white;
@@ -409,18 +571,6 @@ textarea {
 
     #historia {
         height: 100%;
-    }
-
-    #legalidad img {
-        width: 70%;
-        float: none;
-        padding: 1.5%;
-        margin-left: 14%;
-        margin-bottom: 4%;
-    }
-
-    #legalidad2 {
-        display: none;
     }
 
     .parrafoi {
@@ -438,17 +588,13 @@ textarea {
         display: none;
     }
 
-    .imagen {
-        float: none;
-        width: 30%;
-        height: auto;
-    }
+    
 
-    #comunes2 {
+    #trucos2 {
         display: none;
     }
 
-    #comunes {
+    #trucos {
         height: 100%;
         width: auto;
     }
@@ -459,7 +605,7 @@ textarea {
 
     .menu {
         position: fixed;
-        background: #253137;
+        background: #9D8189;
         width: 50%;
         margin-left: -50%;
     }
